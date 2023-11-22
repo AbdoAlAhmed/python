@@ -10,8 +10,8 @@ names = input("""
       """)
 listOfNames = names.split(", ")
 # to know How many people inside this list we use len
-to = len(listOfNames)
-randomName = random.randint(1,to)
+to = len(listOfNames) -1 
+randomName = random.randint(0,to)
 
 print(f"Ask {listOfNames[randomName]} to Pay for the dinner ")
 
