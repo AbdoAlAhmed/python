@@ -4,7 +4,7 @@ print("Welcom To Our Horse🐎 And Rabbit🐇 Game")
 
 list = [["🌳","🌳","🌳"],["🌳","🌳","🌳"],["🌳","🌳","🌳"]]
 
-print(f"{list[0]} \n {list[1]} \n {list[2]}")
+print(f" \n{list[0]} \n {list[1]} \n {list[2]}")
 
 # Ask him where to put the rabbit first  and print the list
 rabbit = input("Where to put the Rabbit 🐇 ?")
