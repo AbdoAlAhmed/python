@@ -55,53 +55,46 @@ if knowTheGame == "help":
 # if enter skip to the next step ----
 
 # ask him for input form this list ( rock - papre - scissor ) you make list first then ask
-choise = ['rock','paper','scissor']
-userChoise = input("choise between rock -- papper -- scissor ").lower()
+choice = ["rock","paper","scissor"]
+userChoice = input("choise between rock -- paper -- scissor ").lower()
 # check if he choice right 
-if userChoise in choise:
+if userChoice  in choice:
     print ("  ----    continue ...  ----")
 # if wrong print and error message and quit 
 else: 
     print("you choised something wrong or something happer")
 # if true  make a random int from 1 - 3 and make him choics
-computerChoise = random.randint(0,2)
+computerChoice = random.choice(["rock","paper","scissor"])
 # then assign the random number to one of the varible 
-if userChoise == "rock" :
+if userChoice == "rock" :
     print(rock)
-elif userChoise == "scissor":
+elif userChoice == "scissor":
     print(scissor)
-elif userChoise == "paper":
+elif userChoice == "paper":
     print(paper)
 
 
-if choise[computerChoise] == "rock" :
+if computerChoice == "rock" :
     print(rock)
-elif choise[computerChoise] == "scissor":
+elif computerChoice == "scissor":
     print(scissor)
-elif choise[computerChoise] == "paper":
+
+elif computerChoice == "paper":
     print(paper)
 else: 
-    print("")
+    print(f"{computerChoice}")
 # check both result form random and the user input 
 
-if choise[computerChoise] == "rock" and userChoise == "paper":
-    print(" user win and computer lose")
+if computerChoice ==  userChoice :
+    print(" It's a tie !")
 
-elif choise[computerChoise] == "paper" and userChoise == "rock":    
-    print(" user lose and compuer win")
-    
-elif choise[computerChoise] == "scissor" and userChoise == "rock":    
-    print(" user lose and compuer win")
-    
-elif choise[computerChoise] == "rock" and userChoise == "scissor":    
-    print(" user win and compuer lose")
-
-elif choise[computerChoise] == "paper" and userChoise == "scissor":    
-    print(" user win and compuer lose")
-    
-elif choise[computerChoise] == "scissor" and userChoise == "paper":    
-    print(" user lose and compuer win")
+elif (
+    computerChoice == 'rock' and userChoice == 'paper'
+    or computerChoice == 'paper' and userChoice == 'scissor'
+    or computerChoice == 'scissor' and userChoice == 'rock'
+):
+    print( f" user win cuz {userChoice} beat {computerChoice}")
 else: 
-        print(" Draw  ----")
+    print( f" computer win cuz {computerChoice} beat {userChoice}")
 
 # and decide if the user win lose or it's adraw with print both choice for the user and random method
